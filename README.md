@@ -25,12 +25,13 @@ supabase functions deploy submit-recruitment --no-verify-jwt
 ```
 
 ## 3) إضافة المتغيرات السرية
+
+بريد الإدارة مضبوط مسبقًا على: `mahmoodejo@gmail.com`
 في Supabase > Edge Functions > Secrets أضف:
 
 - `SUPABASE_URL`
 - `SUPABASE_SERVICE_ROLE_KEY`
 - `RESEND_API_KEY`
-- `ADMIN_EMAIL` = بريدك الذي تريد استقبال الطلبات عليه
 - `FROM_EMAIL` = بريد إرسال موثّق في Resend
 
 مثال:
@@ -58,3 +59,11 @@ Resend يتطلب عادةً توثيق النطاق لاستخدام بريدك
 ## الأمان
 لا تضع `SUPABASE_SERVICE_ROLE_KEY` أو `RESEND_API_KEY` داخل ملفات الموقع العامة.
 هذه المفاتيح تبقى داخل Edge Function Secrets فقط.
+
+
+## ملاحظة الإصدار v2
+تم تثبيت بريد الإدارة على `mahmoodejo@gmail.com`. ما زال يلزم إدخال رابط مشروع Supabase الحقيقي في `config.js` بعد نشر Edge Function.
+
+
+## إصدار v3
+تم ربط `config.js` بمشروع Supabase: `sybsrxckdoobxjlnuuvy`.
